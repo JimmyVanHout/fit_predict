@@ -35,7 +35,7 @@ pip3 install tensorflow
 
 To train the model on a GPU on your local machine, you must install [CUDA](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html). You *may* need to also install [cuDNN](https://docs.nvidia.com/deeplearning/cudnn/install-guide/index.html).
 
-Alternatively, you can run all of the programs, including model training, in Google Colab.
+Alternatively, you can run all of the programs, including model training, in [Google Colab](https://colab.research.google.com/drive/1DHR1RDCctDW5vJsScnUjwE8q0quqA2Mn#scrollTo=TfaEK6zZGvig).
 
 ## Creating the Database
 
@@ -47,9 +47,9 @@ python3 create_database.py [<num_members>]
 
 This will create a database with 40,000 members by default, or `num_members` members if specified. The data set has been designed to be fairly, though certainly not completely, realistic, in order to demonstrate the predictive power of the trained model. Each record contains data for a single member at a single class and has the following form:
 
-    ```
-    <id>, <location>, <date>, <age>, <max_heart_rate>, <medication>, <class_num>
-    ```
+```
+<id>, <location>, <date>, <age>, <max_heart_rate>, <medication>, <class_num>
+```
 
 Important features of the data set include:
 
@@ -87,11 +87,11 @@ python3 train_model_simple.py
 
 This model takes as input each individual workout record, which has the following form after unnecessary columns are dropped:
 
-    ```
-    <age>, <medication>
-    ```
+```
+<age>, <medication>
+```
 
-    > The number of classes the member has taken at the time they took this class, inclusive of this class, is dropped because it does not strongly correlate with the max heart rate due to the way the data set has been generated. Similarly, any other column that would not have a relation to and thus would not correlate strongly with the max heart rate variable was dropped.
+> The number of classes the member has taken at the time they took this class, inclusive of this class, is dropped because it does not strongly correlate with the max heart rate due to the way the data set has been generated. Similarly, any other column that would not have a relation to and thus would not correlate strongly with the max heart rate variable was dropped.
 
 The model is saved in the directory `fcnn_single`.
 
