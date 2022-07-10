@@ -2,7 +2,7 @@
 
 ## About
 
-This set of programs yields a regression model that is able to predict the maximum heart rate of a member of a group workout gym from an artificially generated data set. This is done by:
+This set of programs yields two different trained regression models based on a fully connected neural network that is able to predict the maximum heart rate of a member of a group workout gym from an artificially generated data set. This is done by:
 
 1. Creating an artificial yet realistic set of records of classes of all gym members.
 
@@ -45,7 +45,7 @@ To create the database, run:
 python3 create_database.py [<num_members>]
 ```
 
-This will create a database with 40,000 members by default, or `num_members` members if specified. The data set has been designed to be fairly, though certainly not completely, realistic, in order to demonstrate the predictive power of the trained model. Each record contains data for a single member at a single class and has the following form:
+This will create a database with 40,000 members by default, or `<num_members>` members if specified. The data set has been designed to be fairly, though certainly not completely, realistic, in order to demonstrate the predictive power of the trained model. Each record contains data for a single member at a single class and has the following form:
 
 ```
 <id>, <location>, <date>, <age>, <max_heart_rate>, <medication>, <class_num>
